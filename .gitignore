@@ -1,0 +1,16 @@
+# Результаты сборки
+hello
+hello.exe
+*.o
+*.obj
+*.out
+
+# Каталоги CMake
+build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+
+# Настройки редактора
+.vscode/ipch/
+.vscode/.browse.VC.db
