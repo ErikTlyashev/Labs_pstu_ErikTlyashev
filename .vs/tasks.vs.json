@@ -1,0 +1,20 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "задача-zad1",
+      "appliesTo": "lab1/zad1/zad1.cpp",
+      "type": "launch"
+    },
+    {
+      "taskLabel": "задача-zad1",
+      "appliesTo": "lab1/zad1/zad1.cpp",
+      "type": "launch"
+    },
+    {
+      "taskLabel": "задача-zad1",
+      "appliesTo": "lab1/zad1/zad1.cpp",
+      "type": "launch"
+    }
+  ]
+}
