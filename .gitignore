@@ -14,3 +14,20 @@ CMakeCache.txt
 # Настройки редактора
 .vscode/ipch/
 .vscode/.browse.VC.db
+
+# Visual Studio
+.vs/
+*.ipch
+*.obj
+*.exe
+*.pdb
+*.ilk
+*.idb
+Debug/
+Release/
+x64/
+x86/
+
+# Прочее
+*.user
+*.suo
