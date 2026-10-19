@@ -1,8 +1,11 @@
 #include <iostream>  
-using namespace std; 
+using namespace std;
 
-int main() {
- 
+int main() 
+{
+
+    setlocale(LC_ALL, "ru_RU.UTF-8");
+
     float a_f = 1000.0f;                  // a = 1000 для типа float
     float b_f = 0.0001f;                  // b = 0.0001 для типа float
     double a_d = 1000.0;                  // a = 1000 для типа double
@@ -51,5 +54,5 @@ int main() {
     bool expr3_d = m_d-- > m_d;           // сравнение, m уменьшается
     cout << "3) m-- > m = " << expr3_d << " (m теперь " << m_d << ")" << endl;
 
-    return 0;                             
+    return 0;
 }
