@@ -1,5 +1,10 @@
 #include <iostream>
+using namespace std;
 int main() {
-    std::cout << "poka" << std::endl;
+    setlocale(LC_ALL, "RU");
+    char a, b, c, d, e;
+    cin << a << b << c << d << e;
+    cout << e << '' << d << '' << c << '' << b << '' << a;
+
     return 0;
 }
