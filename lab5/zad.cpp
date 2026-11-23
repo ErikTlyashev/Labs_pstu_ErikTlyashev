@@ -1,6 +1,7 @@
 #include <iostream>  // Подключение библиотеки для ввода-вывода
 #include <iomanip>   // Подключение библиотеки для форматирования вывода (setw)
 #include <cstdlib>   // Подключение библиотеки для system()
+#include <clocale>
 using namespace std; // Использование стандартного пространства имен
 
 // Лабораторная работа №5, вариант 24
@@ -49,9 +50,9 @@ int countGreater(const int a[][MAXM], int n, int m) {
 }
 
 int main() {                                 // Главная функция
-#ifdef _WIN32
-    system("chcp 65001 > nul");              // Русский текст в консоли Windows
-#endif
+       
+    setlocale(LC_ALL, "Russian");
+    
     int a[MAXN][MAXM];                       // Двумерный массив
     int n, m;                                // Реальные размеры массива
 
