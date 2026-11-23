@@ -1,6 +1,7 @@
 #include <iostream>  // Подключение библиотеки для ввода-вывода
 #include <cstring>   // Подключение библиотеки для работы со строками (strlen)
 #include <cstdlib>   // Подключение библиотеки для system()
+#include <clocale>
 using namespace std; // Использование стандартного пространства имен
 
 // Лабораторная работа №7.1, вариант 24. Перегрузка функций.
@@ -39,9 +40,7 @@ void removeEven(char s[]) {
 }
 
 int main() {                                 // Главная функция
-#ifdef _WIN32
-    system("chcp 65001 > nul");              // Русский текст в консоли Windows
-#endif
+    setlocale(LC_ALL, "Russian");
     // а) массив целых чисел
     int a[100];                              // Массив
     int n;                                   // Длина массива

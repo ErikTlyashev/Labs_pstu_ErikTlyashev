@@ -1,5 +1,6 @@
 #include <iostream>  // Подключение библиотеки для ввода-вывода
 #include <cstdlib>   // Подключение библиотеки для system()
+#include <clocale>
 using namespace std; // Использование стандартного пространства имен
 
 // Лабораторная работа №4, вариант 24
@@ -29,9 +30,10 @@ void printRing(const int a[], int n, int k) {
 }
 
 int main() {                                 // Главная функция
-#ifdef _WIN32
-    system("chcp 65001 > nul");              // Русский текст в консоли Windows
-#endif
+
+    setlocale(LC_ALL, "Russian");
+        
+     
     int a[N];                                // Массив, в котором хранится кольцо
     int n;                                   // Реальная длина кольца (n <= N)
     int k;                                   // Номер элемента, с которого начинается печать

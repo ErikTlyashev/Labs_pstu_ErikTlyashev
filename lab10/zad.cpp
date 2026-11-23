@@ -1,6 +1,7 @@
 #include <iostream>  // Подключение библиотеки для ввода-вывода
 #include <cstring>   // Подключение библиотеки для работы со строками (strlen, strcpy)
 #include <cstdlib>   // Подключение библиотеки для system()
+#include <clocale>
 using namespace std; // Использование стандартного пространства имен
 
 // Лабораторная работа №10, вариант 24
@@ -48,9 +49,11 @@ void freeArray(char** arr, int n) {
 }
 
 int main() {                                 // Главная функция
-#ifdef _WIN32
-    system("chcp 65001 > nul");              // Русский текст в консоли Windows
-#endif
+        
+
+    setlocale(LC_ALL, "Russian");
+
+
     int n, k;                                // Число строк и число удаляемых строк
     cout << "Введите количество строк: ";
     cin >> n;                                // Ввод размера
