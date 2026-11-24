@@ -1,38 +1,31 @@
 #include <iostream>
 #include <clocale>
-
 using namespace std;
 
-// Задание 2: все элементы главной и побочной диагонали -> 0
 int main() {
-
     setlocale(LC_ALL, "Russian");
 
-    int n = 5;                                 // диагонали у квадратной матрицы
-    int** m = new int* [n];
-    for (int i = 0; i < n; i++) {
-        m[i] = new int[n];
-        for (int j = 0; j < n; j++) m[i][j] = i * n + j + 1;
-    }
+    int n;
+    cout << "Введите n: ";
+    cin >> n;
 
-    cout << "До:\n";
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) cout << m[i][j] << '\t';
-        cout << '\n';
-    }
+    int a[100][100];
+
+    // заполняем единицами
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
+            a[i][j] = 1;
+
+    // выше главной И выше побочной -> 0
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
+            if (j > i && i + j < n - 1)
+                a[i][j] = 0;
 
     for (int i = 0; i < n; i++) {
-        m[i][i] = 0;                           // главная диагональ
-        m[i][n - 1 - i] = 0;                   // побочная диагональ
+        for (int j = 0; j < n; j++)
+            cout << a[i][j] << ' ';
+        cout << endl;
     }
-
-    cout << "После:\n";
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) cout << m[i][j] << '\t';
-        cout << '\n';
-    }
-
-    for (int i = 0; i < n; i++) delete[] m[i];
-    delete[] m;
     return 0;
 }
